@@ -1,0 +1,18 @@
+sources:
+  - id: cdc_handwashing
+    title: "CDC: When and How to Wash Your Hands"
+    url: "https://www.cdc.gov/clean-hands/about-handwashing.html"
+    topics: ["handwashing", "soap", "20 seconds"]
+  - id: ada_brushing
+    title: "ADA: Brushing Your Teeth"
+    url: "https://www.ada.org/resources/ada-library/oral-health-topics/brushing-your-teeth"
+    topics: ["brushing", "fluoride", "2 minutes"]
+  - id: ada_floss
+    title: "ADA: Floss"
+    url: "https://www.ada.org/resources/ada-library/oral-health-topics/floss"
+    topics: ["flossing", "plaque"]
+  - id: nhlbi_sleep
+    title: "NHLBI (NIH): Sleep Deprivation and Deficiency"
+    url: "https://www.nhlbi.nih.gov/health/sleep-deprivation"
+    topics: ["sleep hygiene", "caffeine", "screens"]
+

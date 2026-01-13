@@ -1,0 +1,42 @@
+{
+  "generated_at": "2026-01-13T00:00:00.000Z",
+  "docs": [
+    {
+      "id": "cdc_handwashing_20s",
+      "title": "CDC: When and How to Wash Your Hands",
+      "url": "https://www.cdc.gov/clean-hands/about-handwashing.html",
+      "last_updated": "2025-10-01",
+      "snippet": "Wash hands with soap and water for at least 20 seconds, scrubbing all surfaces including between fingers and under nails.",
+      "keywords": ["handwashing", "soap", "20 seconds", "scrub", "clean hands"],
+      "headings": ["How to wash hands", "When to wash hands"]
+    },
+    {
+      "id": "ada_brushing_2min",
+      "title": "ADA: Brushing Your Teeth",
+      "url": "https://www.ada.org/resources/ada-library/oral-health-topics/brushing-your-teeth",
+      "last_updated": "2025-06-15",
+      "snippet": "Brush for two minutes with fluoride toothpaste, using gentle circular motions and covering all tooth surfaces and the gumline.",
+      "keywords": ["brushing", "teeth", "2 minutes", "fluoride", "gumline"],
+      "headings": ["How to brush", "How often to brush"]
+    },
+    {
+      "id": "ada_flossing_daily",
+      "title": "ADA: Flossing",
+      "url": "https://www.ada.org/resources/ada-library/oral-health-topics/floss",
+      "last_updated": "2025-06-15",
+      "snippet": "Floss once a day to remove plaque and food between teeth where a toothbrush cannot reach; curve floss into a C-shape along each tooth.",
+      "keywords": ["floss", "plaque", "between teeth", "daily"],
+      "headings": ["How to floss"]
+    },
+    {
+      "id": "nih_sleep_hygiene",
+      "title": "NIH: Healthy Sleep Habits",
+      "url": "https://www.nhlbi.nih.gov/health/sleep-deprivation",
+      "last_updated": "2024-12-01",
+      "snippet": "Keep a consistent sleep schedule, limit caffeine late in the day, and reduce screen light before bed to support better sleep.",
+      "keywords": ["sleep hygiene", "schedule", "caffeine", "screens", "bedtime"],
+      "headings": ["Healthy sleep habits"]
+    }
+  ]
+}
+
