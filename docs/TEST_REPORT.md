@@ -2,7 +2,7 @@
 
 Date: 2026-01-14  
 Commit tested (initial run): `f8fe986f4f23292862a4bc8b8ca1d1ecca66a183`
-Commit tested (post-fix rerun): _(set after commit in this update)_
+Commit tested (post-fix rerun): `2d92114a70344a6a921f78fc4bd0ee9e542485cf`
 
 This report runs the full verification suite and captures command logs under `docs/command-logs/`.
 
