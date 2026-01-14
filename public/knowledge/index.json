@@ -1,42 +1,120 @@
 {
-  "generated_at": "2026-01-13T00:00:00.000Z",
+  "generated_at": "2026-01-14T02:59:57.327Z",
   "docs": [
     {
-      "id": "cdc_handwashing_20s",
+      "id": "cdc_handwashing",
       "title": "CDC: When and How to Wash Your Hands",
-      "url": "https://www.cdc.gov/clean-hands/about-handwashing.html",
-      "last_updated": "2025-10-01",
-      "snippet": "Wash hands with soap and water for at least 20 seconds, scrubbing all surfaces including between fingers and under nails.",
-      "keywords": ["handwashing", "soap", "20 seconds", "scrub", "clean hands"],
-      "headings": ["How to wash hands", "When to wash hands"]
+      "url": "https://www.cdc.gov/clean-hands/about/index.html",
+      "last_updated": "2026-01-14",
+      "snippet": "Handwashing with soap is one of the best ways to stay healthy.",
+      "keywords": [
+        "cdc",
+        "when",
+        "how",
+        "wash",
+        "your",
+        "hands",
+        "about",
+        "handwashing",
+        "key",
+        "points",
+        "why",
+        "important",
+        "times",
+        "works",
+        "use",
+        "hand"
+      ],
+      "headings": [
+        "About Handwashing",
+        "Key points",
+        "Why it's important",
+        "Key times to wash hands",
+        "How it works",
+        "Use hand sanitizer when you can't use soap and water",
+        "What you can do",
+        "Resources"
+      ]
     },
     {
-      "id": "ada_brushing_2min",
-      "title": "ADA: Brushing Your Teeth",
-      "url": "https://www.ada.org/resources/ada-library/oral-health-topics/brushing-your-teeth",
-      "last_updated": "2025-06-15",
-      "snippet": "Brush for two minutes with fluoride toothpaste, using gentle circular motions and covering all tooth surfaces and the gumline.",
-      "keywords": ["brushing", "teeth", "2 minutes", "fluoride", "gumline"],
-      "headings": ["How to brush", "How often to brush"]
+      "id": "mouthhealthy_brushing",
+      "title": "MouthHealthy (ADA): Brushing Your Teeth",
+      "url": "https://www.mouthhealthy.org/all-topics-a-z/brushing-your-teeth/",
+      "last_updated": "2026-01-14",
+      "snippet": "Brushing your teeth is an important part of your dental care routine. For a healthy mouth and smile the ADA recommends you:",
+      "keywords": [
+        "mouthhealthy",
+        "ada",
+        "brushing",
+        "your",
+        "teeth",
+        "fluoride",
+        "minutes"
+      ],
+      "headings": [
+        "Brushing Your Teeth"
+      ]
     },
     {
-      "id": "ada_flossing_daily",
-      "title": "ADA: Flossing",
-      "url": "https://www.ada.org/resources/ada-library/oral-health-topics/floss",
-      "last_updated": "2025-06-15",
-      "snippet": "Floss once a day to remove plaque and food between teeth where a toothbrush cannot reach; curve floss into a C-shape along each tooth.",
-      "keywords": ["floss", "plaque", "between teeth", "daily"],
-      "headings": ["How to floss"]
+      "id": "mouthhealthy_flossing",
+      "title": "MouthHealthy (ADA): Flossing",
+      "url": "https://www.mouthhealthy.org/all-topics-a-z/flossing/",
+      "last_updated": "2026-01-14",
+      "snippet": "Unfortunately, these aren’t the best tools for cleaning between teeth. In fact, they can even be harmful. More than 40% of people surveyed said they",
+      "keywords": [
+        "mouthhealthy",
+        "ada",
+        "flossing",
+        "what",
+        "should",
+        "use",
+        "clean",
+        "between",
+        "teeth",
+        "floss",
+        "before",
+        "after",
+        "brushing",
+        "kids",
+        "need",
+        "steps"
+      ],
+      "headings": [
+        "Flossing",
+        "What should I use to clean between my teeth?",
+        "Should I floss before or after brushing my teeth?",
+        "Do kids need to floss?",
+        "5 steps for flawless flossing"
+      ]
     },
     {
-      "id": "nih_sleep_hygiene",
-      "title": "NIH: Healthy Sleep Habits",
+      "id": "nhlbi_sleep",
+      "title": "NHLBI (NIH): Sleep Deprivation and Deficiency",
       "url": "https://www.nhlbi.nih.gov/health/sleep-deprivation",
-      "last_updated": "2024-12-01",
-      "snippet": "Keep a consistent sleep schedule, limit caffeine late in the day, and reduce screen light before bed to support better sleep.",
-      "keywords": ["sleep hygiene", "schedule", "caffeine", "screens", "bedtime"],
-      "headings": ["Healthy sleep habits"]
+      "last_updated": "2026-01-14",
+      "snippet": "Interested in learning more about the science behind how sleep works, including sleep/wake cycles, and sleep phases & stages? Visit our How Sleep Works section",
+      "keywords": [
+        "nhlbi",
+        "nih",
+        "sleep",
+        "deprivation",
+        "deficiency",
+        "what",
+        "language",
+        "switcher",
+        "book",
+        "traversal",
+        "links",
+        "92364",
+        "hygiene",
+        "caffeine",
+        "screens"
+      ],
+      "headings": [
+        "Sleep Deprivation and Deficiency What Are Sleep Deprivation and Deficiency?",
+        "Language switcher",
+        "Book traversal links for 92364"
+      ]
     }
   ]
 }
-

@@ -3,17 +3,17 @@ export type Env = Record<string, unknown>
 const ALLOWLIST: Array<{ title: string; url: string; topicTokens: string[] }> = [
   {
     title: 'CDC: When and How to Wash Your Hands',
-    url: 'https://www.cdc.gov/clean-hands/about-handwashing.html',
+    url: 'https://www.cdc.gov/clean-hands/about/index.html',
     topicTokens: ['hand', 'wash', 'soap', 'seconds'],
   },
   {
-    title: 'ADA: Brushing Your Teeth',
-    url: 'https://www.ada.org/resources/ada-library/oral-health-topics/brushing-your-teeth',
+    title: 'MouthHealthy (ADA): Brushing Your Teeth',
+    url: 'https://www.mouthhealthy.org/all-topics-a-z/brushing-your-teeth/',
     topicTokens: ['brush', 'teeth', 'fluoride', 'minutes'],
   },
   {
-    title: 'ADA: Floss',
-    url: 'https://www.ada.org/resources/ada-library/oral-health-topics/floss',
+    title: 'MouthHealthy (ADA): Flossing',
+    url: 'https://www.mouthhealthy.org/all-topics-a-z/flossing/',
     topicTokens: ['floss', 'plaque', 'between'],
   },
   {
