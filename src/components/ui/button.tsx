@@ -17,10 +17,10 @@ const buttonVariants = cva(
         ghost: 'hover:bg-white/8 text-white',
       },
       size: {
-        sm: 'h-9 px-3',
-        md: 'h-10 px-4',
-        lg: 'h-11 px-5',
-        icon: 'h-10 w-10',
+        sm: 'h-10 px-3',
+        md: 'h-11 px-4',
+        lg: 'h-12 px-5',
+        icon: 'h-11 w-11',
       },
     },
     defaultVariants: {
@@ -45,4 +45,3 @@ export const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
   },
 )
 Button.displayName = 'Button'
-
