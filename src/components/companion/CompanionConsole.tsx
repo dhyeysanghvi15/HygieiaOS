@@ -150,7 +150,7 @@ export function CompanionConsole({ compactHeader }: { compactHeader?: boolean })
 
   return (
     <div className="flex h-full flex-col gap-3">
-      <GlassPanel className={compactHeader ? 'px-4 py-3' : undefined}>
+      <GlassPanel density="compact" className={compactHeader ? 'px-4 py-3' : 'px-5 py-4'}>
         <div className="flex flex-wrap items-center justify-between gap-3">
           <div className="flex items-center gap-2">
             <Sparkles className="h-4 w-4 text-white/80" />
@@ -200,11 +200,11 @@ export function CompanionConsole({ compactHeader }: { compactHeader?: boolean })
         </div>
       </GlassPanel>
 
-      <div className="glass flex-1 rounded-2xl p-3">
+      <div className="glass flex-1 rounded-2xl">
         <ChatThread messages={messages} whisperMode={whisperMode} onRunAction={onRunAction} />
       </div>
 
-      <GlassPanel className="p-3">
+      <GlassPanel density="compact" className="p-3 sm:p-4">
         <InputBar
           value={text}
           onChange={setText}

@@ -61,12 +61,12 @@ export function InputBar({
 
   return (
     <div className="space-y-2">
-      <div className="flex gap-2 overflow-auto pb-1">
+      <div className="flex gap-2 overflow-auto pb-1 sm:flex-wrap sm:overflow-visible">
         {suggestions.slice(0, 6).map((s) => (
           <button
             key={s.label}
             type="button"
-            className="whitespace-nowrap rounded-full border border-white/10 bg-white/6 px-3 py-1 text-xs text-white/75 hover:bg-white/8"
+            className="whitespace-nowrap rounded-full border border-white/10 bg-white/6 px-3 py-1.5 text-xs text-white/75 hover:bg-white/8"
             onClick={() => onChange(s.text)}
           >
             {s.label}

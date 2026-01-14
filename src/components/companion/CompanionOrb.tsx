@@ -13,7 +13,7 @@ export function CompanionOrb() {
       type="button"
       aria-label={dockOpen ? 'Close companion' : 'Open companion'}
       onClick={() => setDockOpen(!dockOpen)}
-      className="fixed bottom-[92px] right-4 z-50 sm:bottom-[96px]"
+      className="fixed bottom-[calc(92px+env(safe-area-inset-bottom))] right-4 z-50 sm:bottom-[calc(96px+env(safe-area-inset-bottom))]"
     >
       <motion.div
         className={cn(
@@ -28,4 +28,3 @@ export function CompanionOrb() {
     </button>
   )
 }
-
