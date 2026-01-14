@@ -53,57 +53,46 @@ export function CheckpointCard({
         {checkpoint.icon}
       </div>
 
-      <div className="flex flex-col gap-3 sm:flex-row sm:items-start sm:justify-between">
+      <div className="flex flex-col gap-4 lg:flex-row lg:items-start lg:justify-between">
         <div className="min-w-0">
-          <div className="flex items-center gap-2">
-            <div className="text-base font-semibold">{checkpoint.title}</div>
+          <div className="flex flex-wrap items-center gap-2">
+            <div className="text-lg font-semibold tracking-tight text-white/95">{checkpoint.title}</div>
             {completedToday ? (
-              <span className="rounded-full border border-accent-3/30 bg-accent-3/12 px-2 py-0.5 text-xs text-white/80">
+              <span className="rounded-full border border-accent-3/30 bg-accent-3/10 px-2 py-1 text-xs text-white/80">
                 Done
               </span>
             ) : null}
             {snoozed ? (
-              <span className="rounded-full border border-accent-warn/30 bg-accent-warn/10 px-2 py-0.5 text-xs text-white/80">
+              <span className="rounded-full border border-accent-warn/30 bg-accent-warn/10 px-2 py-1 text-xs text-white/80">
                 Snoozed
               </span>
             ) : null}
           </div>
-          <div className="mt-1 text-sm text-white/70">{checkpoint.why}</div>
+          <div className="mt-2 text-base leading-relaxed text-white/70">{checkpoint.why}</div>
           {preferred ? (
-            <div className="mt-2 text-xs text-white/60">Nudges adapted toward {preferred} (local-only).</div>
+            <div className="mt-2 text-sm text-white/55">Nudges adapted toward {preferred} (local-only).</div>
           ) : null}
-          <div className="mt-3 flex items-center gap-2">
-            {(['30s', '2m', '5m'] as const).map((v) => (
-              <button
-                key={v}
-                type="button"
-                onClick={() => setIntensity(v)}
-                className={cn(
-                  'rounded-full border border-white/10 bg-white/6 px-3 py-1 text-xs text-white/70 transition-colors hover:bg-white/8',
-                  v === intensity && 'border-accent/30 bg-accent/12 text-white shadow-glow',
-                )}
-              >
-                {v}
-              </button>
-            ))}
+
+          <div className="mt-4">
+            <div className="inline-flex overflow-hidden rounded-full border border-white/10 bg-white/5">
+              {(['30s', '2m', '5m'] as const).map((v) => (
+                <button
+                  key={v}
+                  type="button"
+                  onClick={() => setIntensity(v)}
+                  className={cn(
+                    'min-w-[64px] px-3 py-2 text-xs font-semibold text-white/70 transition-colors hover:bg-white/6',
+                    v === intensity && 'bg-accent/14 text-white',
+                  )}
+                >
+                  {v}
+                </button>
+              ))}
+            </div>
           </div>
         </div>
 
-        <div className="flex flex-wrap gap-2 sm:justify-end">
-          <Button variant="ghost" onClick={() => navigate('/companion')}>
-            Ask Companion
-          </Button>
-          {[15, 30, 60].map((m) => (
-            <Button
-              key={m}
-              onClick={() => {
-                snooze(checkpointId, m)
-                startTimer({ id: 'snooze', label: `${checkpoint.title} (Snooze ${m}m)`, seconds: m * 60 })
-              }}
-            >
-              Snooze {m}m
-            </Button>
-          ))}
+        <div className="flex flex-col gap-2 sm:flex-row sm:flex-wrap lg:max-w-[420px] lg:justify-end">
           <Button
             variant="primary"
             onClick={() => {
@@ -116,9 +105,35 @@ export function CheckpointCard({
                 seconds: Math.round(10 * intensityMultiplier),
               })
             }}
+            className="sm:order-2 sm:min-w-[160px]"
           >
             Mark Done
           </Button>
+
+          <Button variant="ghost" onClick={() => navigate('/companion')} className="sm:order-1 sm:min-w-[160px]">
+            Ask Companion
+          </Button>
+
+          <details className="group sm:order-3 sm:min-w-[200px]">
+            <summary className="list-none">
+              <Button className="w-full">Snooze…</Button>
+            </summary>
+            <div className="mt-2 grid gap-2 rounded-2xl border border-white/10 bg-white/5 p-3">
+              {[15, 30, 60].map((m) => (
+                <button
+                  key={m}
+                  type="button"
+                  className="rounded-xl border border-white/10 bg-white/6 px-3 py-2 text-left text-sm text-white/80 hover:bg-white/8"
+                  onClick={() => {
+                    snooze(checkpointId, m)
+                    startTimer({ id: 'snooze', label: `${checkpoint.title} (Snooze ${m}m)`, seconds: m * 60 })
+                  }}
+                >
+                  Snooze {m} minutes
+                </button>
+              ))}
+            </div>
+          </details>
         </div>
       </div>
 
@@ -128,7 +143,7 @@ export function CheckpointCard({
         </div>
       ) : null}
 
-      <div className="mt-4 grid gap-2 sm:grid-cols-2">
+      <div className="mt-5 grid gap-3 sm:grid-cols-2">
         {checkpoint.actions.map((a) => {
           if (a.kind === 'timer') {
             const seconds =
@@ -147,7 +162,7 @@ export function CheckpointCard({
               <button
                 key={a.label}
                 type="button"
-                className="glass flex items-center justify-between rounded-2xl px-4 py-3 text-left text-sm text-white/85 transition-colors hover:bg-white/6"
+                className="glass flex min-h-[52px] items-center justify-between rounded-2xl px-4 py-3 text-left text-sm text-white/85 transition-colors hover:bg-white/6"
                 onClick={() =>
                   startTimer({
                     id: a.timerId,
@@ -166,7 +181,7 @@ export function CheckpointCard({
               <button
                 key={a.label}
                 type="button"
-                className="glass flex items-center justify-between rounded-2xl px-4 py-3 text-left text-sm text-white/85 transition-colors hover:bg-white/6"
+                className="glass flex min-h-[52px] items-center justify-between rounded-2xl px-4 py-3 text-left text-sm text-white/85 transition-colors hover:bg-white/6"
                 onClick={() => addWater(a.ml)}
               >
                 <span>{a.label}</span>
@@ -179,7 +194,7 @@ export function CheckpointCard({
               <button
                 key={a.label}
                 type="button"
-                className="glass flex items-center justify-between rounded-2xl px-4 py-3 text-left text-sm text-white/85 transition-colors hover:bg-white/6"
+                className="glass flex min-h-[52px] items-center justify-between rounded-2xl px-4 py-3 text-left text-sm text-white/85 transition-colors hover:bg-white/6"
                 onClick={() => navigate('/insights')}
               >
                 <span>{a.label}</span>

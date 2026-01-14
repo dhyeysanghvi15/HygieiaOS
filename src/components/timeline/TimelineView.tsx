@@ -1,9 +1,11 @@
 import { motion } from 'framer-motion'
 import { CheckpointCard } from './CheckpointCard'
-import { GlassPanel } from '../common/GlassPanel'
 import { Button } from '../ui/button'
 import { Droplet, Sun, MoonStar, BedDouble, Sparkles } from 'lucide-react'
 import { useCheckinsStore } from '../../features/checkins/store'
+import { PageHeader } from '../common/PageHeader'
+import { Section } from '../common/Section'
+import { Stack } from '../common/Stack'
 
 export type CheckpointAction =
   | { kind: 'timer'; timerId: 'brush' | 'handwash' | 'breath60' | 'breath120' | 'focus25'; label: string }
@@ -64,40 +66,48 @@ const checkpoints: readonly Checkpoint[] = [
 export function TimelineView() {
   const addWater = useCheckinsStore((s) => s.addWater)
   return (
-    <div className="space-y-3">
-      <GlassPanel className="flex items-center justify-between gap-3">
-        <div>
-          <div className="text-sm font-semibold">Daily Mission Path</div>
-          <div className="mt-1 text-sm text-white/70">
-            Pick a checkpoint, choose intensity, and let your companion guide you.
+    <Stack gap="gap-6 sm:gap-8">
+      <Section className="pt-0">
+        <PageHeader
+          title="Home"
+          subtitle="Your daily mission path: pick a checkpoint, choose intensity, and keep momentum with tiny wins."
+          actions={
+            <Button variant="primary" onClick={() => addWater(250)} aria-label="Log 250 milliliters water">
+              <Sparkles className="h-4 w-4" />
+              Log +250ml
+            </Button>
+          }
+        />
+      </Section>
+
+      <Section className="pt-0">
+        <div className="relative">
+          <div className="absolute left-4 top-0 h-full w-px bg-white/10 sm:left-6" aria-hidden="true" />
+          <div className="space-y-4 sm:space-y-5">
+            {checkpoints.map((c, idx) => (
+              <motion.div
+                key={c.id}
+                initial={{ opacity: 0, y: 12 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: idx * 0.05, type: 'spring', stiffness: 240, damping: 26 }}
+              >
+                <div className="mb-2 pl-10 sm:pl-12">
+                  <div className="text-xs font-semibold tracking-wide text-white/55">
+                    {c.id === 'morning'
+                      ? 'MORNING'
+                      : c.id === 'day'
+                        ? 'DAY'
+                        : c.id === 'evening'
+                          ? 'EVENING'
+                          : 'BEDTIME'}
+                  </div>
+                </div>
+                <CheckpointCard checkpoint={c} />
+              </motion.div>
+            ))}
           </div>
         </div>
-        <Button
-          variant="primary"
-          onClick={() => addWater(250)}
-          className="shrink-0"
-          aria-label="Log 250 milliliters water"
-        >
-          <Sparkles className="h-4 w-4" />
-          +250ml
-        </Button>
-      </GlassPanel>
-
-      <div className="relative">
-        <div className="absolute left-4 top-0 h-full w-px bg-white/10 sm:left-6" aria-hidden="true" />
-        <div className="space-y-3">
-          {checkpoints.map((c, idx) => (
-            <motion.div
-              key={c.id}
-              initial={{ opacity: 0, y: 12 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: idx * 0.05, type: 'spring', stiffness: 240, damping: 24 }}
-            >
-              <CheckpointCard checkpoint={c} />
-            </motion.div>
-          ))}
-        </div>
-      </div>
-    </div>
+      </Section>
+    </Stack>
   )
 }
