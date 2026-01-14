@@ -1,0 +1,12 @@
+
+> wellnessos@0.0.0 e2e
+> playwright test
+
+
+Running 3 tests using 3 workers
+
+  ✓  2 [chromium] › e2e/smoke.spec.ts:2:1 › app loads and shows shell (524ms)
+  ✓  1 [chromium] › e2e/smoke.spec.ts:57:1 › vault stores encrypted blobs (no plaintext leakage) (715ms)
+  ✓  3 [chromium] › e2e/smoke.spec.ts:11:1 › companion chat, tools timer, vault, and knowledge citations (1.3s)
+
+  3 passed (2.5s)

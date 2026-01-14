@@ -1,0 +1,5 @@
+
+> wellnessos@0.0.0 knowledge:build
+> tsx scripts/knowledge/build.ts
+
+Built: cdc_handwashing (1 words)\nBuilt: mouthhealthy_brushing (1 words)\nBuilt: mouthhealthy_flossing (1 words)\nBuilt: nhlbi_sleep (1 words)\nWrote /Users/Dhey/Desktop/Project_Github/HygieiaOS/public/knowledge/index.json\n

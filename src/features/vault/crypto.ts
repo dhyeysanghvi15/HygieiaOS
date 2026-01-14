@@ -20,11 +20,14 @@ function b64ToBytes(b64: string) {
 }
 
 export async function sha256B64(data: Uint8Array) {
-  // Copy into a fresh Uint8Array and pass the view (not the buffer) to avoid
-  // cross-realm ArrayBuffer issues in some Node+jsdom test runners.
-  const copy = new Uint8Array(data.byteLength)
-  copy.set(data)
-  const digest = await crypto.subtle.digest('SHA-256', copy as unknown as BufferSource)
+  // Node's WebCrypto does strict brand checks on BufferSource inputs.
+  // In some test runners (Node + jsdom), Uint8Array/ArrayBuffer instances can be
+  // created in a different realm and fail those checks. Prefer a Node Buffer
+  // when available (still a valid BufferSource), otherwise fall back to Uint8Array.
+  const maybeBuffer = (globalThis as unknown as { Buffer?: { from?: (x: Uint8Array) => unknown } })
+    .Buffer
+  const input = typeof maybeBuffer?.from === 'function' ? maybeBuffer.from(data) : data
+  const digest = await crypto.subtle.digest('SHA-256', input as unknown as BufferSource)
   return bytesToB64(new Uint8Array(digest))
 }
 

@@ -1,0 +1,23 @@
+
+> wellnessos@0.0.0 lint
+> eslint . --max-warnings 0
+
+
+> wellnessos@0.0.0 test
+> vitest run
+
+
+[1m[46m RUN [49m[22m [36mv4.0.17 [39m[90m/Users/Dhey/Desktop/Project_Github/HygieiaOS[39m
+
+ [32m✓[39m src/features/routine/__tests__/routine.test.ts [2m([22m[2m1 test[22m[2m)[22m[32m 2[2mms[22m[39m
+ [32m✓[39m src/features/vault/__tests__/vault.test.ts [2m([22m[2m2 tests[22m[2m)[22m[32m 4[2mms[22m[39m
+ [32m✓[39m src/features/timers/__tests__/timers.test.ts [2m([22m[2m1 test[22m[2m)[22m[32m 1[2mms[22m[39m
+(node:84563) Warning: `--localstorage-file` was provided without a valid path
+(Use `node --trace-warnings ...` to show where the warning was created)
+ [32m✓[39m src/features/companion/safety/__tests__/safety.test.ts [2m([22m[2m1 test[22m[2m)[22m[32m 2[2mms[22m[39m
+
+[2m Test Files [22m [1m[32m4 passed[39m[22m[90m (4)[39m
+[2m      Tests [22m [1m[32m5 passed[39m[22m[90m (5)[39m
+[2m   Start at [22m 20:11:28
+[2m   Duration [22m 705ms[2m (transform 210ms, setup 206ms, import 227ms, tests 10ms, environment 1.81s)[22m
+

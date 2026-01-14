@@ -1,0 +1,12 @@
+
+> wellnessos@0.0.0 e2e
+> playwright test
+
+[2m[WebServer] [22m[31merror when starting preview server:
+[2m[WebServer] [22mError: listen EPERM: operation not permitted 127.0.0.1:4173
+[2m[WebServer] [22m    at Server.setupListenHandle [as _listen2] (node:net:1918:21)
+[2m[WebServer] [22m    at listenInCluster (node:net:1997:12)
+[2m[WebServer] [22m    at node:net:2206:7
+[2m[WebServer] [22m    at process.processTicksAndRejections (node:internal/process/task_queues:89:21)[39m
+Error: Process from config.webServer was not able to start. Exit code: 1
+

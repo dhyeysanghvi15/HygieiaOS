@@ -2,6 +2,7 @@
 
 Date: 2026-01-14  
 Commit tested (initial run): `f8fe986f4f23292862a4bc8b8ca1d1ecca66a183`
+Commit tested (post-fix rerun): _(set after commit in this update)_
 
 This report runs the full verification suite and captures command logs under `docs/command-logs/`.
 
@@ -78,6 +79,22 @@ The sanity script enforces:
 - no oversized snippets / keyword lists
 
 Note: The current HTML extraction produced very short snippets (see `docs/command-logs/07_knowledge_build.txt`). This is not a test failure, but it reduces answer usefulness and should be improved in the extraction heuristics if desired.
+
+## Post-fix Rerun (Vault Ledger Digest)
+
+GitHub Actions was failing `src/features/vault/__tests__/vault.test.ts` with:
+- `TypeError: Failed to execute 'digest' on 'SubtleCrypto': 2nd argument is not instance of ArrayBuffer, Buffer, TypedArray, or DataView.`
+
+Fix:
+- Updated `src/features/vault/crypto.ts` `sha256B64()` to prefer a Node `Buffer` at runtime (when available) to avoid cross-realm `BufferSource` brand-check failures in Node+jsdom test runners, while keeping the browser path unchanged.
+
+Re-verified (post-fix logs):
+- Lint + Vitest: `docs/command-logs/10_lint_test_green.txt`
+- Knowledge build (network): `docs/command-logs/11_knowledge_build.txt`
+- E2E (first attempt fails in sandbox due to port bind restrictions): `docs/command-logs/12_e2e.txt`
+- E2E (escalated in sandbox; should not be needed on a normal machine): `docs/command-logs/12_e2e_escalated.txt`
+- Knowledge sanity (first attempt fails in sandbox due to tsx IPC pipe restrictions): `docs/command-logs/13_knowledge_sanity.txt`
+- Knowledge sanity (escalated in sandbox; should not be needed on a normal machine): `docs/command-logs/13_knowledge_sanity_escalated.txt`
 
 ## Fixes Applied During This Run
 
