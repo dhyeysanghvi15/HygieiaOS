@@ -3,6 +3,7 @@
 Date: 2026-01-14  
 Commit tested (initial run): `f8fe986f4f23292862a4bc8b8ca1d1ecca66a183`
 Commit tested (post-fix rerun): `2d92114a70344a6a921f78fc4bd0ee9e542485cf`
+Final gate rerun (docs-only follow-up): `f624a1e1c821478a2a7f6c05f5dfb7591d0d3a85`
 
 This report runs the full verification suite and captures command logs under `docs/command-logs/`.
 
@@ -121,3 +122,7 @@ Re-run the full suite on the final tree:
 - `npm run e2e`
 
 And confirm: `git status --porcelain` is empty.
+
+Final gate logs (rerun after the doc fix above):
+- `docs/command-logs/14_final_gate.txt`
+- `docs/command-logs/15_final_e2e_escalated.txt`
