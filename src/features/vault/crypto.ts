@@ -20,10 +20,11 @@ function b64ToBytes(b64: string) {
 }
 
 export async function sha256B64(data: Uint8Array) {
-  // Ensure ArrayBuffer (not SharedArrayBuffer) for strict DOM typings.
+  // Copy into a fresh Uint8Array and pass the view (not the buffer) to avoid
+  // cross-realm ArrayBuffer issues in some Node+jsdom test runners.
   const copy = new Uint8Array(data.byteLength)
   copy.set(data)
-  const digest = await crypto.subtle.digest('SHA-256', copy.buffer)
+  const digest = await crypto.subtle.digest('SHA-256', copy as unknown as BufferSource)
   return bytesToB64(new Uint8Array(digest))
 }
 
