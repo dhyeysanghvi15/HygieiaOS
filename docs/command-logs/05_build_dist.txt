@@ -1,0 +1,16 @@
+
+## dist listing
+total 40
+-rw-r--r--   1 Dhey  staff   514 13 Jan 20:02 _headers
+drwxr-xr-x  10 Dhey  staff   320 13 Jan 20:02 .
+drwxr-xr-x  33 Dhey  staff  1056 13 Jan 20:01 ..
+drwxr-xr-x   5 Dhey  staff   160 13 Jan 20:02 assets
+drwxr-xr-x   5 Dhey  staff   160 13 Jan 20:02 icons
+-rw-r--r--   1 Dhey  staff   674 13 Jan 20:02 index.html
+drwxr-xr-x   3 Dhey  staff    96 13 Jan 20:02 knowledge
+-rw-r--r--   1 Dhey  staff   493 13 Jan 20:02 manifest.webmanifest
+-rw-r--r--   1 Dhey  staff   134 13 Jan 20:02 registerSW.js
+-rw-r--r--   1 Dhey  staff  1614 13 Jan 20:02 sw.js
+
+## dist file count
+      12

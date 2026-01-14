@@ -1,0 +1,14 @@
+
+[1m[46m RUN [49m[22m [36mv4.0.17 [39m[90m/Users/Dhey/Desktop/Project_Github/HygieiaOS[39m
+
+ [32m✓[39m src/features/routine/__tests__/routine.test.ts[2m > [22mroutine adapt[2m > [22mcomputes preferred minute after enough completions[32m 1[2mms[22m[39m
+ [32m✓[39m src/features/vault/__tests__/vault.test.ts[2m > [22mvault crypto[2m > [22mencrypts and decrypts json[32m 2[2mms[22m[39m
+ [32m✓[39m src/features/vault/__tests__/vault.test.ts[2m > [22mledger[2m > [22mdetects tampering[32m 1[2mms[22m[39m
+ [32m✓[39m src/features/timers/__tests__/timers.test.ts[2m > [22mtimers[2m > [22mcomputes progress[32m 1[2mms[22m[39m
+ [32m✓[39m src/features/companion/safety/__tests__/safety.test.ts[2m > [22msafety policy[2m > [22mred tier response avoids disallowed content[32m 1[2mms[22m[39m
+
+[2m Test Files [22m [1m[32m4 passed[39m[22m[90m (4)[39m
+[2m      Tests [22m [1m[32m5 passed[39m[22m[90m (5)[39m
+[2m   Start at [22m 20:02:04
+[2m   Duration [22m 512ms[2m (transform 172ms, setup 187ms, import 186ms, tests 8ms, environment 1.16s)[22m
+

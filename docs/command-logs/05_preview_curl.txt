@@ -1,0 +1,20 @@
+preview pid=81226
+curl: (7) Failed to connect to 127.0.0.1 port 4173 after 0 ms: Couldn't connect to server
+
+## curl / (first 5 lines)
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" href="/icons/icon-192.png" />
+
+## curl -I /
+HTTP/1.1 200 OK
+Vary: Origin
+Content-Type: text/html
+Cache-Control: no-cache
+Etag: W/"2a2-jX1If/GY8X3GtyFhojOkvYb9a0E"
+Date: Wed, 14 Jan 2026 03:02:55 GMT
+Connection: keep-alive
+Keep-Alive: timeout=5
+

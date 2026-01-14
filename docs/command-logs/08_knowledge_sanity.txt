@@ -1,0 +1,3 @@
+Knowledge sanity PASS
+Docs: 4
+Snippets: <= 25 words

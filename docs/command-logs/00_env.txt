@@ -1,0 +1,24 @@
+## node -v
+v25.2.1
+
+## npm -v
+11.6.2
+
+## git status --porcelain
+?? docs/
+
+## git rev-parse HEAD
+f8fe986f4f23292862a4bc8b8ca1d1ecca66a183
+
+## package.json scripts
+{
+  "dev": "vite",
+  "build": "tsc -b && vite build",
+  "lint": "eslint . --max-warnings 0",
+  "typecheck": "tsc -b --pretty false",
+  "test": "vitest run",
+  "test:watch": "vitest",
+  "e2e": "playwright test",
+  "knowledge:build": "tsx scripts/knowledge/build.ts",
+  "preview": "vite preview"
+}
