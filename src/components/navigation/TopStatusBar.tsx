@@ -60,12 +60,12 @@ export function TopStatusBar() {
   const sleepPct = clamp(sleep.lastNightHours / 8, 0, 1)
 
   return (
-    <GlassPanel className="px-4 py-3">
-      <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
+    <GlassPanel density="compact" className="px-4 py-3 sm:px-5">
+      <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
         <div className="flex items-center justify-between gap-3 sm:justify-start">
           <div>
             <div className="text-xs text-white/60">{todayLabel()}</div>
-            <div className="mt-0.5 text-lg font-semibold tracking-tight">WellnessOS</div>
+            <div className="mt-0.5 text-lg font-semibold tracking-tight text-white/95">WellnessOS</div>
           </div>
           <div className="flex items-center gap-2">
             <span className="rounded-full border border-white/12 bg-white/8 px-3 py-1 text-xs text-white/80">
@@ -75,7 +75,7 @@ export function TopStatusBar() {
               type="button"
               aria-label={locked ? 'Privacy lock is enabled' : 'Enable privacy lock'}
               className={cn(
-                'grid h-9 w-9 place-items-center rounded-xl border border-white/12 bg-white/8 text-white/85 transition-colors hover:bg-white/10',
+                'grid h-10 w-10 place-items-center rounded-xl border border-white/12 bg-white/8 text-white/85 transition-colors hover:bg-white/10',
                 locked && 'border-accent/40 bg-accent/15 text-white shadow-glow',
               )}
               onClick={() => lock()}
@@ -85,7 +85,7 @@ export function TopStatusBar() {
           </div>
         </div>
 
-        <div className="flex flex-wrap items-center justify-between gap-3 sm:justify-end">
+        <div className="flex flex-wrap items-center justify-between gap-4 sm:justify-end">
           <Ring label="Hydration" value={hydrationPct} icon={<Droplet className="h-4 w-4" />} />
           <Ring label="Mood" value={moodPct} icon={<Smile className="h-4 w-4" />} />
           <Ring label="Sleep" value={sleepPct} icon={<MoonStar className="h-4 w-4" />} />

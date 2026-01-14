@@ -9,7 +9,7 @@ export function RescueFAB() {
   return (
     <button
       type="button"
-      className="fixed bottom-[92px] left-4 z-50 grid h-12 w-12 place-items-center rounded-full border border-white/12 bg-accent-2/25 text-white shadow-glow backdrop-blur-xl hover:bg-accent-2/30 sm:bottom-[96px]"
+      className="fixed bottom-[calc(92px+env(safe-area-inset-bottom))] left-4 z-50 grid h-12 w-12 place-items-center rounded-full border border-white/12 bg-accent-2/20 text-white shadow-glow backdrop-blur-xl hover:bg-accent-2/26 sm:bottom-[calc(96px+env(safe-area-inset-bottom))]"
       aria-label="Start 2-minute rescue"
       onClick={() => {
         start({ id: 'rescue', label: '2-minute rescue', seconds: 120 })
@@ -29,4 +29,3 @@ export function RescueFAB() {
     </button>
   )
 }
-

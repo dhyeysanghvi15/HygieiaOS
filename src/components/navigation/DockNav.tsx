@@ -15,16 +15,16 @@ export function DockNav() {
   return (
     <nav
       aria-label="Dock navigation"
-      className="fixed bottom-3 left-1/2 z-40 w-[min(720px,calc(100vw-24px))] -translate-x-1/2"
+      className="fixed bottom-[max(12px,env(safe-area-inset-bottom))] left-1/2 z-40 w-[min(760px,calc(100vw-24px))] -translate-x-1/2"
     >
-      <div className="glass flex items-center justify-between rounded-2xl px-2 py-2">
+      <div className="glass flex items-center justify-between rounded-2xl px-2 py-2.5">
         {items.map(({ to, label, icon: Icon }) => (
           <NavLink
             key={to}
             to={to}
             className={({ isActive }) =>
               cn(
-                'relative flex w-full flex-col items-center justify-center gap-1 rounded-xl px-2 py-2 text-xs text-white/70 transition-colors hover:text-white',
+                'relative flex w-full flex-col items-center justify-center gap-1 rounded-xl px-2 py-2.5 text-xs text-white/70 transition-colors hover:text-white',
                 isActive && 'text-white',
               )
             }
@@ -34,7 +34,7 @@ export function DockNav() {
                 {isActive && (
                   <motion.div
                     layoutId="dockActive"
-                    className="absolute inset-1 rounded-xl bg-white/10"
+                    className="absolute inset-1 rounded-xl bg-white/8"
                     transition={{ type: 'spring', stiffness: 420, damping: 32 }}
                   />
                 )}
@@ -48,4 +48,3 @@ export function DockNav() {
     </nav>
   )
 }
-
