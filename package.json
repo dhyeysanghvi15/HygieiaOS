@@ -65,7 +65,7 @@
     "jsdom": "^27.4.0",
     "pngjs": "^7.0.0",
     "postcss": "^8.5.6",
-    "prettier": "^3.7.4",
+    "prettier": "^3.8.0",
     "tailwindcss": "^4.1.18",
     "tsx": "^4.21.0",
     "typescript": "~5.9.3",
