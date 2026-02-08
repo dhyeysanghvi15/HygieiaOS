@@ -1,11 +1,11 @@
 {
-  "generated_at": "2026-01-14T03:17:37.988Z",
+  "generated_at": "2026-02-08T04:46:07.720Z",
   "docs": [
     {
       "id": "cdc_handwashing",
       "title": "CDC: When and How to Wash Your Hands",
       "url": "https://www.cdc.gov/clean-hands/about/index.html",
-      "last_updated": "2026-01-14",
+      "last_updated": "2026-02-08",
       "snippet": "Handwashing with soap is one of the best ways to stay healthy.",
       "keywords": [
         "cdc",
@@ -40,7 +40,7 @@
       "id": "mouthhealthy_brushing",
       "title": "MouthHealthy (ADA): Brushing Your Teeth",
       "url": "https://www.mouthhealthy.org/all-topics-a-z/brushing-your-teeth/",
-      "last_updated": "2026-01-14",
+      "last_updated": "2026-02-08",
       "snippet": "Brushing your teeth is an important part of your dental care routine. For a healthy mouth and smile the ADA recommends you:",
       "keywords": [
         "mouthhealthy",
@@ -59,7 +59,7 @@
       "id": "mouthhealthy_flossing",
       "title": "MouthHealthy (ADA): Flossing",
       "url": "https://www.mouthhealthy.org/all-topics-a-z/flossing/",
-      "last_updated": "2026-01-14",
+      "last_updated": "2026-02-08",
       "snippet": "Unfortunately, these aren’t the best tools for cleaning between teeth. In fact, they can even be harmful. More than 40% of people surveyed said they",
       "keywords": [
         "mouthhealthy",
@@ -91,7 +91,7 @@
       "id": "nhlbi_sleep",
       "title": "NHLBI (NIH): Sleep Deprivation and Deficiency",
       "url": "https://www.nhlbi.nih.gov/health/sleep-deprivation",
-      "last_updated": "2026-01-14",
+      "last_updated": "2026-02-08",
       "snippet": "Interested in learning more about the science behind how sleep works, including sleep/wake cycles, and sleep phases & stages? Visit our How Sleep Works section",
       "keywords": [
         "nhlbi",
@@ -105,7 +105,6 @@
         "book",
         "traversal",
         "links",
-        "92364",
         "hygiene",
         "caffeine",
         "screens"
@@ -113,7 +112,7 @@
       "headings": [
         "Sleep Deprivation and Deficiency What Are Sleep Deprivation and Deficiency?",
         "Language switcher",
-        "Book traversal links for 92364"
+        "Book traversal links for Sleep Deprivation and Deficiency"
       ]
     }
   ]
